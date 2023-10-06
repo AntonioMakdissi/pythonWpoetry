@@ -56,10 +56,10 @@ jobs:
           poetry run coverage report
 ###########################################
 
-      - name: Run coverage
-        run: |
-          coverage run ...
-          coverage report -m
+      # - name: Run coverage
+      #   run: |
+      #     poetry run coverage run ...
+      #     poetry run coverage report -m
 
       - name: Coverage Badge
         uses: tj-actions/coverage-badge-py@v2
