@@ -44,14 +44,13 @@ jobs:
         #----------------------------------------------
       # install your root project, if required
       #----------------------------------------------
-      - name: Install project
-        run: poetry install --no-interaction
+      # - name: Install project
+      #   run: poetry install --no-interaction
 
       #----------------------------------------------
       #              run test suite
       #----------------------------------------------
       - name: Run tests
         run: |
-          source .venv/bin/activate
           poetry run coverage run -m pytest
           poetry run coverage report
