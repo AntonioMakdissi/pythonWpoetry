@@ -1,1 +1,1 @@
-![test](https://github.com/github/docs/actions/workflows/auto_test.yml/badge.svg)
+![test](https://github.com/AntonioMakdissi/pythonWpoetry/actions/workflows/auto_test.yml/badge.svg)
