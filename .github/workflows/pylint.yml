@@ -3,7 +3,7 @@ name: PyLint
 on:
   push:
     branches:
-      - main  # Change to the branch you want to trigger the action on
+      - main  
 
 jobs:
   lint:
@@ -17,13 +17,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8  # Change to your desired Python version
+          python-version: 3.8
 
       - name: Install Dependencies
         run: pip install pylint
 
       - name: Run PyLint
-        run: pylint your_python_file.py  # Replace with the name of your Python file
+        run: pylint python_w_poetry, tests
 
       - name: Upload PyLint Report
         uses: actions/upload-artifact@v2
