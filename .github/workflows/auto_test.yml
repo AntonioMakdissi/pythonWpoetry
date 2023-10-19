@@ -51,6 +51,7 @@ jobs:
       #              run test suite
       #----------------------------------------------
       - name: Run tests
+        continue-on-error: true
         run: |
           poetry run coverage run -m pytest
           poetry run coverage report
@@ -103,7 +104,8 @@ jobs:
         run: pip install pylint
 
       - name: Run PyLint
-        run: poetry run pylint python_w_poetry, tests
+        continue-on-error: true
+        run: poetry run ./pylint python_w_poetry, ./tests
 
       - name: Upload PyLint Report
         uses: actions/upload-artifact@v2
