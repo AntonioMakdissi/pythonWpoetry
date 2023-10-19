@@ -86,11 +86,11 @@ jobs:
           branch: ${{ github.ref }}
 #################################################
 #PYLINT
-  lint:
-    name: Run PyLint
-    runs-on: ubuntu-latest
+  # lint:
+  #   name: Run PyLint
+  #   runs-on: ubuntu-latest
 
-    steps:
+  #   steps:
       # - name: Checkout Repository
       #   uses: actions/checkout@v2
 
