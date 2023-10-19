@@ -51,4 +51,4 @@ class TestFirstWordFunction(unittest.TestCase):
         assert funct.first_word("... and so on ...") == "and"
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main() #
