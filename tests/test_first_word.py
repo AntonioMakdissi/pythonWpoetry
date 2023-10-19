@@ -4,12 +4,14 @@ This script contains unit tests for the 'first_word' function from the 'funct' m
 import unittest
 from python_w_poetry import funct
 
+
 class TestFirstWordFunction(unittest.TestCase):
-    """ A test suite for the 'first_word' function.
+    """A test suite for the 'first_word' function.
 
     This test suite includes multiple test cases to verify the behavior of the 'first_word' function
     when extracting the first word from different types of input texts.
     """
+
     def test_single_word(self):
         """
         Test case to extract the first word from a text containing a single word.
@@ -50,5 +52,6 @@ class TestFirstWordFunction(unittest.TestCase):
         """
         assert funct.first_word("... and so on ...") == "and"
 
-if __name__ == '__main__':
-    unittest.main() #
+
+if __name__ == "__main__":
+    unittest.main()  #
