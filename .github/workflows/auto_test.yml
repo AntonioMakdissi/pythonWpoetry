@@ -86,19 +86,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           branch: ${{ github.ref }}
 #################################################
-#PYLINT
-  # lint:
-  #   name: Run PyLint
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-      # - name: Checkout Repository
-      #   uses: actions/checkout@v2
-
-      # - name: Set up Python
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: 3.8
+      #PYLINT
 
       - name: Install Dependencies
         run: pip install pylint
@@ -111,7 +99,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: pylint-report
-          path: pylint.log  # Replace with the path to your PyLint report
+          path: pylint.log 
 
 
 
