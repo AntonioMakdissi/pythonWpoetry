@@ -28,7 +28,7 @@ jobs:
           mkdir gh-pages
           touch gh-pages/.nojekyll
           cd docs/
-          sphinx-build -b html source build
+          make html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
