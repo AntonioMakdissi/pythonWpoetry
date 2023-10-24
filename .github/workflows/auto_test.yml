@@ -102,10 +102,6 @@ jobs:
           path: pylint.log 
 #################################################
       #SPHINX
-      - uses: abatilo/actions-poetry@v2.1.3
-      - name: install
-        run: poetry install -E amazon -E docs
-        ##################
       - name: Install Sphinx
         run: poetry install --no-root
 
@@ -125,7 +121,6 @@ jobs:
           make html
       #    poetry run sphinx-build -b html . ../gh-pages
 #sphinx-apidoc -o . ..
-
 
 
 ####
