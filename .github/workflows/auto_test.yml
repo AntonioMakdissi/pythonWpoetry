@@ -105,14 +105,22 @@ jobs:
       - name: Install Sphinx
         run: poetry install --no-root
 
+      # - name: Build documentation
+      #   run: |
+      #     mkdir gh-pages
+      #     touch gh-pages/.nojekyll
+      #     cd docs/
+      #     poetry run sphinx-build -b html . _build
+      #     cp -r _build/* ../gh-pages/
+###
       - name: Build documentation
         run: |
           mkdir gh-pages
           touch gh-pages/.nojekyll
           cd docs/
-          poetry run sphinx-build -b html . _build
-          cp -r _build/* ../gh-pages/
+          poetry run sphinx-build -b html . ../gh-pages
 
+####
       - name: Deploy documentation
         if: ${{ github.event_name == 'push' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
