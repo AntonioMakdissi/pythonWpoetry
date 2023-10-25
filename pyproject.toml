@@ -10,6 +10,7 @@ packages = [{include = "pythonwpoetry", from = "src"}]
 python = "^3.11"
 coverage = "^7.3.2"
 pylint = "^3.0.1"
+sphinx = "^7.2.6"
 
 
 [tool.poetry.group.dev.dependencies]
