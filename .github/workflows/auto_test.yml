@@ -112,17 +112,7 @@ jobs:
           cd docs/
           poetry run sphinx-build -b html . _build
           cp -r _build/* ../gh-pages/
-###
-      # - name: Build documentation
-      #   run: |
-      #     mkdir gh-pages
-      #     touch gh-pages/.nojekyll
-      #     cd docs/
-      #     make html
-      #    poetry run sphinx-build -b html . ../gh-pages
-#sphinx-apidoc -o . ..
 
-####
       - name: Deploy documentation
         if: ${{ github.event_name == 'push' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
